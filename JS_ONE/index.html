@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<script type="text/javascript" src="index.js">
+//			alert("helloJS");
+		</script>
+		<title></title>
+	</head>
+	<body>
+	// 音频
+	<audio src = "song.mp3" controls="controls"></audio>
+	// 视频
+	<video src="video.mp4", controls="controls" width="300" height="200"></video>
+	// Canvas
+	<canvas width="400" height="300" id="canvas"></canvas>
+	
+	<p id="deom">
+		js 可以改变HTML的样式
+	</p>
+	<p>请输入数字，如果输入的不是数字，浏览器会弹出提示框</p>
+	<input id="in" type="text" />
+	<script>
+		function clickFunction() {
+			x = document.getElementById("deom"); // 找到元素
+			x.style.color = "#ff0000"; // 改变样式
+		}
+		function myFunction() {
+			var x = document.getElementById("in").value;
+			if(x == "" || isNaN(x)) {
+				alert("NOT Numeric");
+			}
+		}
+	</script>
+	<button type="button" onclick="clickFunction()">点击这里</button>
+	<button type="button" onclick="myFunction()">点击验证</button>
+	</body>
+</html>
